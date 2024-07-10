@@ -1,0 +1,101 @@
+<%- include("header") -%>
+    <section id="image-scroll">
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/carousel1.avif" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="/assets/carousel2.jpeg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="/assets/carousel3.jpeg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </section>
+
+    <section id="product header ">
+      <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="text-danger">Avail now!</h1>
+            <p class="lead text-white font-italic">"Always give without remembering and always receive without forgetting."  <sub class="text-danger">-Brian Tracy</sub></p>
+            <p class="lead text-white font-italic">The real freedom of any individual can always be measured by the amount of responsibility. Use the freedom wisely. Exploiting the benifits of this website is the same as stealing from needy. </p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section id="prod">
+        <div class="cards-container">
+                <%   var nameArr=[];
+                     var descArr=[];
+                     var idArr=[];
+                     var imgArr=[];
+              
+                dbArray.forEach((element) => {
+                    nameArr.push(element.ITEM_NAME);
+                    descArr.push(element.REMARKS);
+                    idArr.push(element.ITEM_POSTED_ID);
+                    imgArr.push(element.PICTURE);
+                });
+                nameArr.forEach(function(element,index) {  %>
+                
+                    
+                   
+            
+                    <div class="card bg-dark" style="width: 18rem;">
+                        <img class="card-img-top card_img" alt="image of the product" src="<%=imgArr[index] %>" >
+                        <div class="card-body">
+                         
+                          <h5 class="card-title text-white"><%= nameArr[index] %></h5>
+                          <p class="card-text text-white"><%= descArr[index] %></p><% var x=idArr[index]; %>
+                          <a href="products/<%= idArr[index] %>"  class="btn btn-danger" id="view">View</a>
+                         
+                        </div>
+                      </div>
+             
+            <%  }); %>
+          </div>
+    
+      </section>
+
+      <section id="backToTop">
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16">
+          <path d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0z"/>
+        </svg></button>
+      </section>
+
+      <%- include("footer") -%>
+     
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+
+    <script>
+      // Function to handle button click
+      function navigateToDonate() {
+          // Set the window location to the desired URL
+          window.location.href = '/donate';
+      }
+  
+      // Get the button element
+      var donateButton = document.getElementById('donateButton');
+  
+      // Attach the click event handler
+      donateButton.addEventListener('click', navigateToDonate);
+  </script>
+
+  
+   
+</body>
+</html>

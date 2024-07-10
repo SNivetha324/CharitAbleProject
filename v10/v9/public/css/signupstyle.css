@@ -1,0 +1,74 @@
+body{
+    background-color: black;
+    color: white;
+}
+#heading a{
+    color: white;
+}
+.nav-link {
+
+    color: red;
+  
+  }
+a img{
+    width:10vw;
+}
+  form{
+    margin:auto;
+    width: 24% 
+}
+
+.btn-primary{
+    width: 100%;
+    border: none;
+    border-radius: 50px;
+    background: black;
+    color:white ;
+    
+}
+.line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: rgb(159, 11, 11);
+    margin: 0 10px;
+}
+.line-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(114, 14, 14);
+    border-color: white;
+}
+
+.icon-container i {
+    font-size: 35px; /* Adjust icon size as needed */
+    margin: 0 20px;  /* Add spacing between icons */
+    color: rgb(159, 11, 11);
+    
+}
+#btn1{
+   
+    align-items: center;
+    background-color: rgb(159, 11, 11);
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+    border-color:  rgb(159, 11, 11);
+}
+@media only screen and (max-width: 600px) {
+    form {
+        width: 100% !important;
+    }
+  }
+
+  input[type="radio"]:checked {
+    background-color: rgb(159, 11, 11);
+    border-color: rgb(159, 11, 11);
+  }
+  

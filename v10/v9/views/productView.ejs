@@ -1,0 +1,103 @@
+<%- include("header2") -%>
+    <section id="product_view" class="my-5">
+        <div class="card" >
+            <div class="conainter bg-dark">
+              
+                <div class="row">
+                    <div class="col-5">
+                      <input type="image" src="../<%=prodArray[0].PICTURE%>" alt="upload image here" width="48" height="48" id="img">
+                    </div>
+                    <div class="col">
+                        <div class="card-body">
+                          <form method="post">
+                            <table class="table table-dark table-striped table-hover table-borderless">
+                              <tr>
+                                <td colspan="2" style="text-align: center;">
+                                  VIEW PRODUCT:
+                                </td>
+                              </tr>
+                                <tr>
+                                    <td>
+                                        Product name:
+                                    </td>
+                                    <td>
+                                        <h5 class="text-danger"><%=prodArray[0].ITEM_NAME%></h5>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Poduct ID:
+                                    </td>
+                                    <td>
+                                      <h5 class="text-danger"><%=prodArray[0].ITEM_POSTED_ID%></h5>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Product condition:
+                                    </td>
+                                    <td>
+                                      <h5 class="text-danger"><%=prodArray[0].CONDITION%></h5>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Posted date:
+                                    </td>
+                                    <td>
+                                      <%
+                                        const dateString = prodArray[0].DATE_POSTED;
+                                        const dateObject = new Date(dateString);
+
+                                        // Extract the date components
+                                        const year = dateObject.getFullYear();
+                                        const month = (dateObject.getMonth() + 1).toString().padStart(2, '0'); // Months are 0-based
+                                        const day = dateObject.getDate().toString().padStart(2, '0');
+
+                                        // Create a new date string in "YYYY-MM-DD" format
+                                        const dateOnly = `${year}-${month}-${day}`;
+
+                                        //console.log(dateOnly);
+
+                                        
+                                        %>
+                                      <h5 class="text-danger"><%= dateOnly %></h5>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Owner name:
+                                    </td>
+                                    <td>
+                                      <h5 class="text-danger"></h5>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Detailed description:
+                                    </td>
+                                    <td>
+                                      <h5 class="text-danger"><%=prodArray[0].REMARKS%></h5>
+                                    </td>
+                                </tr>
+                                <tr>
+                                  <td colspan="2" style="text-align: center;">
+                                    <a href="/sendmail" class="btn btn-danger">Avail product</a>
+                                  </td>
+                                </tr>
+                            </table>
+                          </form>
+                    </div>
+            </div>
+                        
+            </div>
+          </div>
+    </section>
+
+    <%- include("footer") -%>
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+</body>
+</html>

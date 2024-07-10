@@ -1,0 +1,58 @@
+body{
+    background: black;
+    color: white;
+    font: sans-serif;
+}
+form{
+    margin:auto;
+    width: 24% 
+}
+
+.btn-primary{
+    width: 100%;
+    border: none;
+    border-radius: 50px;
+    background: black;
+    color:white ;
+    
+}
+
+#btn1{
+   
+    align-items: center;
+    background-color: rgb(159, 11, 11);
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+    border-color:  rgb(159, 11, 11);
+}
+#flexCheckDefault{
+   
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgb(159, 11, 11);
+    background-color: black;
+    border-radius: 3px;
+   
+}
+ 
+ #heading a{
+    color: white;
+}
+.nav-link {
+
+    color: red;
+  
+  }
+  a img{
+    width:10vw;
+}
+@media only screen and (max-width: 600px) {
+    form {
+        width: 100% !important;
+    }
+  }

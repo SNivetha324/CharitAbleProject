@@ -1,0 +1,74 @@
+@media only screen and (max-width: 600px) {
+    form {
+        width: 100% !important;
+    }
+  }
+body{
+    background-color: black;
+    color: white;
+}
+#heading a{
+    color: white;
+}
+.nav-link {
+
+    color: red;
+  
+  }
+ 
+h1{
+    text-align: center;
+    font-weight: bold;
+}
+#needs
+{
+    background-color: rgb(49, 48, 48);
+}
+textarea::placeholder {
+    color: rgb(54, 53, 53);
+    font-weight: bold;
+}
+#need1::placeholder{
+    color: rgb(54, 53, 53);
+    font-weight: bold;
+}
+#btn1{
+   
+    align-items: center;
+    background-color: rgb(159, 11, 11);
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+    border-color:  rgb(159, 11, 11);
+}
+#myTextInput {
+    width: 200px; /* Set the width of the input field */
+    padding: 10px; /* Add padding for spacing */
+    border: 2px solid rgb(159, 11, 11); /* Set the border properties */
+    font-size: 16px; /* Set the font size */
+    color: #333; /* Set the text color */
+    font-weight: bold;
+}
+
+
+#need-container{
+    border: 2px solid rgb(159, 11, 11);
+    width: 12vw;
+    height: 30vh;
+}
+
+a img{
+    width:10vw;
+}
+
+#btn1{
+    margin-left: 10px;
+}
+
+::placeholder {
+    font-style: italic;
+    font-size: 1em;
+    color: black;
+   
+    padding: 5px;
+  }
